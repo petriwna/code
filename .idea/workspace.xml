@@ -2,29 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbf88d7-287e-4411-8061-78021f0214f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/About.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Articles.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Todos/Todos.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Todos/Todos.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Todos/actions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Todos/component/CreateFormTodos.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Todos/component/CreateInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Todos/component/CreateNote.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Todos/component/TodosForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Todos/component/TodosForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Todos/todoSaga.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Todos/todosSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/createStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/code.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/Todos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Todos/Todos.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/todoSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Todos/todoSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/todosSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Todos/todosSlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -46,7 +46,7 @@ function* updateTodo(action: ActionWithPayload<Todo>) {
   const { payload } = action;
 
   const url = `https://624d5b1cc172b69d69319d83.mockapi.io/api/v1/todo/${payload.id}`;
-  const body = { completed: payload.completed, text: payload.text };
+  const body = { text: payload.title };
   yield axios.put(url, body);
 
   yield put(editTodo(payload));

@@ -36,12 +36,14 @@ export default function Todos() {
 
         <div className="todo-sticker">
           {todos.map((todo) => {
-            const { id, text, completed } = todo;
+            const { id, title } = todo;
 
             return (
               <li key={id} className="todo-item">
                 {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                <p>{id}</p>
+                <p>
+                  {id} {title}
+                </p>
                 {/* <input */}
                 {/*   type="checkbox" */}
                 {/*   defaultChecked={completed} */}

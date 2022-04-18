@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
-export type Todo = { id: string; text: string; completed: boolean };
+export type Todo = { id: string; title: string };
 export type TodoState = {
   isLoading: boolean;
   todos: Array<Todo>;
@@ -26,7 +26,7 @@ export const todosSlice = createSlice({
     },
     createTodo(state, { payload }) {
       const id = parseInt(state.todos[state.todos.length - 1].id, 10) + 1;
-      state.todos.push({ text: payload, completed: false, id: id.toString() });
+      state.todos.push({ title: payload, id: id.toString() });
     },
     removeTodo(state, { payload }) {
       state.todos = state.todos.filter(({ id }) => id !== payload);
@@ -34,14 +34,13 @@ export const todosSlice = createSlice({
     editTodo(state, { payload }) {
       state.todos.forEach((todo) => {
         if (todo.id === payload.id) {
-          todo.text = payload.text;
-          todo.completed = payload.completed;
+          todo.title = payload.text;
         }
       });
     },
-    deleteTodo(state) {
-      state.todos = state.todos.filter(({ completed }) => !completed);
-    },
+    // deleteTodo(state) {
+    //   state.todos = state.todos.filter(({ completed }) => !completed);
+    // },
   },
 });
 
