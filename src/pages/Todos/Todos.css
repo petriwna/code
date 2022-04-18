@@ -1,0 +1,24 @@
+.todo-app{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title{
+    text-align: center;
+    font-size: 30px;
+    margin: 5px;
+}
+
+.content{
+    display: inline;
+    justify-content: center;
+    padding: 15px;
+}
+
+.todo-sticker{
+    margin-top: 50px;
+}
+
+.todo-item{
+    list-style: none;
+}
