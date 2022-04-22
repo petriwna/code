@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbf88d7-287e-4411-8061-78021f0214f8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/About/NoteListItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/About/utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Note/DefaultElement.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Note/Leaf.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Note/Note.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Note/Note.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Note/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Articles.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Todos/Todos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Todos/Todos.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Todos/actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Todos/todoSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Todos/todoSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/todosSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Todos/todosSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -63,6 +76,8 @@
       <recent name="C:\Users\petri\Documents\DevEducation\React_example\code" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\src\pages\About" />
+      <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\src\pages\Note" />
       <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\src\pages\Todos\component" />
       <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\src\pages\Todos" />
     </key>
@@ -112,6 +127,11 @@
       <workItem from="1649423854042" duration="25272000" />
       <workItem from="1649671498871" duration="14400000" />
       <workItem from="1650297409628" duration="7201000" />
+      <workItem from="1650358231122" duration="2156000" />
+      <workItem from="1650392620493" duration="764000" />
+      <workItem from="1650436076053" duration="16371000" />
+      <workItem from="1650529768046" duration="3626000" />
+      <workItem from="1650549156584" duration="5653000" />
     </task>
     <servers />
   </component>

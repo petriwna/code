@@ -15,3 +15,5 @@ export const actionEditTodo = createAction('todos/editTodo');
 export const actionToggleTodo = createAction('todos/toggle');
 
 export const actionEditTextTodo = createAction('todos/editText');
+
+export const actionGetItemsTodo = createAction('items/getAllItems');

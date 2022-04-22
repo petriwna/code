@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import './Todos.css';
 import { Todo, initialState } from './todosSlice';
-import { actionDeleteTodo, actionGetTodos, actionToggleTodo } from './actions';
+import { actionGetItemsTodo, actionGetTodos } from './actions';
 import TodosForm from './component/TodosForm';
 
 export const RootState = { todosState: initialState };
@@ -40,10 +40,7 @@ export default function Todos() {
 
             return (
               <li key={id} className="todo-item">
-                {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-                <p>
-                  {id} {title}
-                </p>
+                <p>{title}</p>
                 {/* <input */}
                 {/*   type="checkbox" */}
                 {/*   defaultChecked={completed} */}

@@ -8,12 +8,23 @@ import {
   actionToggleTodo,
   ActionWithPayload,
   actionEditTextTodo,
+  actionGetItemsTodo,
 } from './actions';
 import { Todo, setTodos, requestTodos, createTodo, removeTodo, editTodo } from './todosSlice';
 
 function* getTodos() {
   yield put(requestTodos());
   const url = 'https://624d5b1cc172b69d69319d83.mockapi.io/api/v1/todo';
+
+  const { data }: AxiosResponse<Array<Todo>> = yield call(axios.get, url);
+
+  yield put(setTodos(data));
+}
+
+function* getTodoItems(action: any) {
+  const { id } = action.payload;
+  yield put(requestTodos());
+  const url = `https://624d5b1cc172b69d69319d83.mockapi.io/api/v1/todo/${id}/items`;
 
   const { data }: AxiosResponse<Array<Todo>> = yield call(axios.get, url);
 
@@ -54,6 +65,7 @@ function* updateTodo(action: ActionWithPayload<Todo>) {
 
 export function* todosSaga() {
   yield takeLatest(actionGetTodos.type, getTodos);
+  yield takeLatest(actionGetItemsTodo.type, getTodoItems);
   yield takeLatest(actionPostTodo.type, postTodo);
   yield takeLatest(actionDeleteTodo.type, deleteTodo);
   yield takeLatest([actionToggleTodo.type, actionEditTextTodo.type], updateTodo);
