@@ -1,46 +1,28 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import loadable from '@loadable/component';
 
 import './App.css';
 
 import { store } from './store';
 
-const About = loadable(() => import('./pages/About/About'));
-const Articles = loadable(() => import('./pages/Note/Note'));
-const Todos = loadable(() => import('./pages/Todos/Todos'));
+const Main = loadable(() => import('./pages/Main/Main'));
+const Editor = loadable(() => import('./pages/Editor/Editor'));
+
+function NotFound() {
+  return <h1>NotFound</h1>;
+}
 
 function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
         <main>
-          <header>
-            <nav className="nav-container">
-              <ul className="nav-list">
-                <li>
-                  <Link className="nav-list-item" to="/">
-                    Todos
-                  </Link>
-                </li>
-                <li>
-                  <Link className="nav-list-item" to="/articles">
-                    Articles
-                  </Link>
-                </li>
-                <li>
-                  <Link className="nav-list-item" to="/about">
-                    About
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </header>
           <Switch>
-            <Route path="/about" component={About} />
-            <Route path="/articles" component={Articles} />
-            <Route path="/" component={Todos} />
+            <Route exact path="/" component={Main} />
+            <Route exact path="/editor/:noteId" component={Editor} />
+            <Route exact path="*" component={NotFound} />
           </Switch>
         </main>
       </BrowserRouter>

@@ -4,6 +4,7 @@ import { CustomEditor, CustomNode } from '../../react-app-env';
 
 export const CustomEditorHelpers = {
   isBoldMarkActive(editor: CustomEditor) {
+    // @ts-ignore
     const [match] = Editor.nodes(editor, {
       match: (n: CustomNode) => Text.isText(n) && n.bold === true,
       universal: true,
@@ -13,6 +14,7 @@ export const CustomEditorHelpers = {
   },
 
   isItalicMarkActive(editor: CustomEditor) {
+    // @ts-ignore
     const [match] = Editor.nodes(editor, {
       match: (n: CustomNode) => Text.isText(n) && n.italic === true,
       universal: true,
@@ -22,6 +24,7 @@ export const CustomEditorHelpers = {
   },
 
   isUnderlineMarkActive(editor: CustomEditor) {
+    // @ts-ignore
     const [match] = Editor.nodes(editor, {
       match: (n: CustomNode) => Text.isText(n) && n.underline === true,
       universal: true,
@@ -31,6 +34,7 @@ export const CustomEditorHelpers = {
   },
 
   isCodeBlockActive(editor: CustomEditor) {
+    // @ts-ignore
     const [match] = Editor.nodes(editor, { match: (n: CustomNode) => Text.isText(n) && n.code === true });
 
     return !!match;

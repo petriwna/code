@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import { createEditor, Descendant } from 'slate';
 import { Slate, Editable, withReact } from 'slate-react';
 import { withHistory } from 'slate-history';
@@ -10,7 +11,7 @@ import { DefaultElement } from './DefaultElement';
 import { Leaf } from './Leaf';
 import { CustomEditorHelpers } from './utils';
 import { CustomEditor } from '../../react-app-env';
-import './Note.css';
+import './Editor.css';
 
 function renderElement(props: RenderElementProps) {
   const { attributes, children } = props;
@@ -25,7 +26,10 @@ function renderLeaf(props: RenderLeafProps) {
   return <Leaf {...props} />;
 }
 
-export default function Note() {
+export default function Editor() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { noteId } = useParams<{ noteId: string }>();
+
   const editor = React.useMemo<CustomEditor>(() => withHistory(withReact(createEditor())), []);
 
   const initialValue = React.useMemo<Descendant[]>(() => {

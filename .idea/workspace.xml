@@ -2,23 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbf88d7-287e-4411-8061-78021f0214f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/About/NoteListItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/About/utils.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Note/DefaultElement.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Note/Leaf.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Note/Note.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Note/Note.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Note/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/mainSaga.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/mainSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About/About.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Articles.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/Todos.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Todos/Todos.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Todos/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/todoSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Todos/todoSaga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/About/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/About/NoteListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/NoteListItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/About/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Note/DefaultElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Editor/DefaultElement.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Note/Leaf.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Editor/Leaf.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Note/Note.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Editor/Editor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Note/Note.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Editor/Editor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Note/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Editor/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/Todos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/Todos.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/component/CreateFormTodos.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/component/CreateInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/component/CreateNote.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/component/TodosForm.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/component/TodosForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/todoSaga.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Todos/todosSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,9 +38,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript JSX File" />
         <option value="CSS File" />
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -50,6 +59,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="277S41HwAxJw7SUqF1xspRNzy6y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,7 +71,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/keeper-master/keeper-master" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -131,7 +143,9 @@
       <workItem from="1650392620493" duration="764000" />
       <workItem from="1650436076053" duration="16371000" />
       <workItem from="1650529768046" duration="3626000" />
-      <workItem from="1650549156584" duration="5653000" />
+      <workItem from="1650549156584" duration="8123000" />
+      <workItem from="1650907938623" duration="9140000" />
+      <workItem from="1650957426104" duration="18072000" />
     </task>
     <servers />
   </component>

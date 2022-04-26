@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import React from 'react';
-import Immutable from 'immutable';
+import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import {
   CellMeasurer,
   CellMeasurerCache,
@@ -14,8 +14,10 @@ import {
 // eslint-disable-next-line @emotion/no-vanilla
 import { css } from '@emotion/css';
 
-import { generateRandomList } from './utils';
 import { NoteListItem } from './NoteListItem';
+import { actionGetNotes } from './actions';
+import { RootState } from '../../store';
+import { Note } from './mainSlice';
 
 const cellMeasurerCache = new CellMeasurerCache({ defaultHeight: 250, defaultWidth: 200, fixedWidth: true });
 
@@ -26,12 +28,18 @@ const state = {
   overscanByPixels: 0,
 };
 
-function BaseAbout() {
-  const [list] = React.useState(Immutable.List(generateRandomList()));
+function BaseMain() {
+  const notes = useSelector<RootState, Array<Note>>((s) => s.main.notes, shallowEqual);
   const masonry = React.useRef<Masonry | null>();
   const columnCount = React.useRef(0);
   const size = React.useRef<Size>({ width: 0, height: state.height });
   const cellPositioner = React.useRef<Positioner | null>();
+
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    dispatch(actionGetNotes());
+  }, [dispatch]);
 
   const initCellPositioner = () => {
     if (!cellPositioner.current) {
@@ -91,7 +99,7 @@ function BaseAbout() {
   };
 
   const cellRenderer = ({ index, key, parent, style }: MasonryCellProps) => {
-    const data = list.get(index % list.size);
+    const data = notes[index];
 
     return (
       <CellMeasurer cache={cellMeasurerCache} index={index} key={key} parent={parent}>
@@ -100,9 +108,9 @@ function BaseAbout() {
             display: flex;
             flex-direction: column;
             border-radius: 0.5rem;
-            padding: 0.5rem;
-            background-color: #f7f7f7;
+            padding: 10px;
             word-break: break-all;
+            margin: 30px 55px;
           `}
           style={{ ...style, width: state.columnWidth }}
         >
@@ -112,8 +120,8 @@ function BaseAbout() {
     );
   };
 
-  return (
-    <AutoSizer style={{ height: 'calc(100vh - 165px)', width: '100%' }} onResize={recomputeRowSizes}>
+  return notes.length ? (
+    <AutoSizer style={{ height: 'calc(100vh)', width: '100%' }} onResize={recomputeRowSizes}>
       {({ width, height }) => {
         size.current.width = width;
         size.current.height = height;
@@ -124,7 +132,7 @@ function BaseAbout() {
               masonry.current = ref;
             }}
             autoHeight={false}
-            cellCount={list.count()}
+            cellCount={notes.length}
             cellMeasurerCache={cellMeasurerCache}
             // @ts-ignore
             cellPositioner={cellPositioner.current}
@@ -136,7 +144,9 @@ function BaseAbout() {
         );
       }}
     </AutoSizer>
+  ) : (
+    <div>...Loading</div>
   );
 }
 
-export default React.memo(BaseAbout);
+export default React.memo(BaseMain);
