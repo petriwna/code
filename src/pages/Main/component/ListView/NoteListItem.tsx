@@ -25,26 +25,21 @@ export function NoteListItem({ data }: Props) {
     <List
       noteid={data.id}
       component={ListLink}
-      sx={{ width: '100%', maxWidth: 360, bgcolor: data.color }}
+      sx={{ width: '20%', bgcolor: `${data.color}`, color: 'black' }}
       elevation={3}
     >
-      <ListItem>
-        title={data?.title}
-        subheader={date}
-        {data?.preview}
-      </ListItem>
-      <ListItem
-        secondaryAction={
-          <IconButton aria-label="settings" edge="end">
-            <MoreVertIcon />
-          </IconButton>
-        }
-      />
+      <ListItem>{data?.title}</ListItem>
+      <ListItem>{data?.preview}</ListItem>
+      <ListItem>{date}</ListItem>
+
       <IconButton aria-label="add to favorites">
         <FavoriteIcon />
       </IconButton>
       <IconButton aria-label="share">
         <ShareIcon />
+      </IconButton>
+      <IconButton aria-label="settings" edge="end">
+        <MoreVertIcon />
       </IconButton>
     </List>
   );
