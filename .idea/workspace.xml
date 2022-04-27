@@ -2,33 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbf88d7-287e-4411-8061-78021f0214f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/Main/actions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Main/mainSaga.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Main/mainSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/List/BasicList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/ViewType.enum.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/component/GalleryView/GalleryView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/component/ListToggle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/component/ListView/ListView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/component/ListView/NoteListItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/About/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/About/NoteListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/NoteListItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/About/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Note/DefaultElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Editor/DefaultElement.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Note/Leaf.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Editor/Leaf.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Note/Note.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Editor/Editor.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Note/Note.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Editor/Editor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Note/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Editor/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/Todos.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/Todos.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/actions.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/component/CreateFormTodos.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/component/CreateInput.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/component/CreateNote.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/component/TodosForm.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/component/TodosForm.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/todoSaga.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Todos/todosSlice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/NoteListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/component/GalleryView/NoteGalleryItem.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -88,6 +73,7 @@
       <recent name="C:\Users\petri\Documents\DevEducation\React_example\code" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\src\pages\Main\component\GalleryView" />
       <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\src\pages\About" />
       <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\src\pages\Note" />
       <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\src\pages\Todos\component" />
@@ -146,6 +132,8 @@
       <workItem from="1650549156584" duration="8123000" />
       <workItem from="1650907938623" duration="9140000" />
       <workItem from="1650957426104" duration="18072000" />
+      <workItem from="1651042132251" duration="6850000" />
+      <workItem from="1651060826552" duration="7519000" />
     </task>
     <servers />
   </component>

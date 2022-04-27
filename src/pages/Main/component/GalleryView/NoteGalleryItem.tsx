@@ -23,23 +23,24 @@ function CardLink(props: DefaultComponentProps<any>) {
   return <Link {...props} to={`/editor/${noteid}`} component={RouterLink} sx={{ textDecoration: 'none' }} />;
 }
 
-export function NoteListItem({ maxWidth, data }: Props) {
+export function NoteGalleryItem({ maxWidth, data }: Props) {
   const date = data?.createdAt ? new Date(data.createdAt * 1000).toDateString() : '';
-
+  /* , backgroundColor: data?.color */
   return (
     <Card noteid={data.id} component={CardLink} sx={{ maxWidth, background: data.color }} elevation={3}>
       <CardHeader
         action={
-          <IconButton arial-label="settings">
+          <IconButton aria-label="settings">
             <MoreVertIcon />
           </IconButton>
         }
-        title={data.title}
+        title={data?.title}
         subheader={date}
       />
+      {/* <CardMedia component="img" height="194" image="/static/images/cards/paella.jpg" alt="Paella dish" /> */}
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          {data.preview}
+          {data?.preview}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
