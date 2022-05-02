@@ -1,54 +1,61 @@
 import React from 'react';
 import { AutoSizer, List, ListRowProps } from 'react-virtualized';
-
+// eslint-disable-next-line @emotion/no-vanilla
 import { css } from '@emotion/css';
+
 import { Note } from '../../mainSlice';
 import { NoteListItem } from './NoteListItem';
-// eslint-disable-next-line @emotion/no-vanilla
 
-const state = {
-  listHeight: 725,
-  listRowHeight: 95,
-  overscanRowCount: 10,
-  scrollToIndex: undefined,
-  showScrollingPlaceholder: false,
-  useDynamicRowHeight: false,
-};
+const noRowsRenderer = () => (
+  <div
+    className={css`
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bdbdbd;
+    `}
+  >
+    No rows
+  </div>
+);
 
 export function ListView({ notes }: { notes: Array<Note> }) {
-  const listView = React.useRef<List | null>();
-
-  const rowRenderer = ({ index, key }: ListRowProps) => {
-    const datum = notes[index];
+  const rowRenderer = ({ index, key, style }: ListRowProps) => {
+    const note = notes[index];
 
     return (
       <div
-        key={key}
         className={css`
-          border: 1px solid lightgrey;
-          border-radius: 10px;
-          margin: 15px;
+          display: flex;
+          background-color: #f1f1f1;
+          border: 1px solid #e0e0e0;
         `}
+        key={key}
+        style={style}
       >
-        <NoteListItem data={datum} />
+        <NoteListItem note={note} />
       </div>
     );
   };
 
   return (
-    <AutoSizer disableHeight>
-      {({ width }) => (
+    <AutoSizer style={{ height: 'calc(100vh - 280px)', width: '100%' }}>
+      {({ width, height }) => (
         <List
-          ref={(ref) => {
-            listView.current = ref;
-          }}
-          height={state.listHeight}
-          overscanRowCount={state.overscanRowCount}
+          autoWidth
+          autoContainerWidth
           rowCount={notes.length}
-          rowHeight={state.listRowHeight}
-          rowRenderer={rowRenderer}
-          scrollToIndex={state.scrollToIndex}
           width={width}
+          height={height}
+          rowHeight={100}
+          overscanRowCount={10}
+          rowRenderer={rowRenderer}
+          noRowsRenderer={noRowsRenderer}
         />
       )}
     </AutoSizer>

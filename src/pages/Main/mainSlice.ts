@@ -7,8 +7,9 @@ export type Note = {
   userId: string;
   content: string;
   preview: string;
-  createAt: number;
-  updateAt: number;
+  color: string;
+  createdAt: number;
+  updatedAt: number;
 };
 export type MainState = {
   isLoading: boolean;

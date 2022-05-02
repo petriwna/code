@@ -1,46 +1,46 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 import List from '@mui/material/List';
 import IconButton from '@mui/material/IconButton';
-import Link from '@mui/material/Link';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { DefaultComponentProps } from '@mui/material/OverridableComponent';
-import { ListItem } from '@mui/material';
+import { Box, ListItemText } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
-type Props = {
-  data: any | undefined;
-};
+import { CustomLink } from '../CustomLink';
+import { Note } from '../../mainSlice';
 
-function ListLink(props: DefaultComponentProps<any>) {
-  const { noteid } = props;
-
-  return <Link {...props} to={`/editor/${noteid}`} component={RouterLink} sx={{ textDecoration: 'none' }} />;
-}
-
-export function NoteListItem({ data }: Props) {
-  const date = data?.createdAt ? new Date(data.createdAt * 1000).toDateString() : '';
+export function NoteListItem({ note }: { note: Note }) {
+  const date = note?.createdAt ? new Date(note.createdAt * 1000).toDateString() : '';
   return (
     <List
-      noteid={data.id}
-      component={ListLink}
-      sx={{ width: '20%', bgcolor: `${data.color}`, color: 'black' }}
+      noteid={note.id}
+      component={CustomLink}
+      sx={{ width: '100%', color: 'black', padding: '10px', bgcolor: `${note.color}`, borderRadius: '10px' }}
       elevation={3}
     >
-      <ListItem>{data?.title}</ListItem>
-      <ListItem>{data?.preview}</ListItem>
-      <ListItem>{date}</ListItem>
-
-      <IconButton aria-label="add to favorites">
-        <FavoriteIcon />
-      </IconButton>
-      <IconButton aria-label="share">
-        <ShareIcon />
-      </IconButton>
-      <IconButton aria-label="settings" edge="end">
-        <MoreVertIcon />
-      </IconButton>
+      <ListItemText
+        primary={
+          <div>
+            <Typography sx={{ lineHeight: 0 }} variant="overline">
+              {note?.title}
+            </Typography>
+            <Typography>{note?.preview}</Typography>
+          </div>
+        }
+        secondary={date}
+      />
+      <Box sx={{ display: 'flex', gap: 2, justifyContent: 'end', marginRight: '15px', marginBottom: '15px' }}>
+        <IconButton aria-label="add to favorites">
+          <FavoriteIcon />
+        </IconButton>
+        <IconButton aria-label="share">
+          <ShareIcon />
+        </IconButton>
+        <IconButton aria-label="settings" edge="end">
+          <MoreVertIcon />
+        </IconButton>
+      </Box>
     </List>
   );
 }

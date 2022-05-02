@@ -8,12 +8,11 @@ import { ViewTypeEnum } from '../ViewType.enum';
 
 const rippleStyle = css`
   position: absolute;
-  background: #ffffff;
+  background: #fff;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   pointer-events: none;
-  animation: riples 0.6s linear infinite;
-
+  animation: ripples 0.6s linear infinite;
   @keyframes ripples {
     0% {
       width: 0;
@@ -57,13 +56,13 @@ const active = css`
 `;
 
 function clickListener(event: React.MouseEvent<HTMLButtonElement>) {
-  const x = event.clientX - event.currentTarget.offsetLeft;
-  const y = event.clientY - event.currentTarget.offsetTop;
+  // const x = event.clientX - event.currentTarget.offsetLeft;
+  // const y = event.clientY - event.currentTarget.offsetTop;
 
   const ripple = document.createElement('span');
   ripple.setAttribute('class', rippleStyle);
-  ripple.style.left = `${x}px`;
-  ripple.style.top = `${y}px`;
+  // ripple.style.left = `${x}px`;
+  // ripple.style.top = `${y}px`;
 
   event.currentTarget.appendChild(ripple);
 
