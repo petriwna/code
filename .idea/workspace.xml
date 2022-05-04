@@ -2,15 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbf88d7-287e-4411-8061-78021f0214f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/Main/component/CustomLink.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lerna.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/server/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/web/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/web/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/component/ListToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/component/ListToggle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/component/ListView/ListView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/component/ListView/ListView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/component/ListView/NoteListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/component/ListView/NoteListItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/mainSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/mainSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/public/logo192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/public/logo512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/App.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Editor/DefaultElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Editor/DefaultElement.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Editor/Editor.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Editor/Editor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Editor/Editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Editor/Editor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Editor/Leaf.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Editor/Leaf.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Editor/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Editor/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/List/BasicList.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Main/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/ViewType.enum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Main/ViewType.enum.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Main/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/component/CustomLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Main/component/CustomLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/component/GalleryView/GalleryView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Main/component/GalleryView/GalleryView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/component/GalleryView/NoteGalleryItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Main/component/GalleryView/NoteGalleryItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/component/ListToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Main/component/ListToggle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/component/ListView/ListView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Main/component/ListView/ListView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/component/ListView/NoteListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Main/component/ListView/NoteListItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/mainSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Main/mainSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/mainSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Main/mainSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/Main/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/reportWebVitals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/setupTests.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/createStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/store/createStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +88,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/keeper-master/keeper-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/server" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -67,22 +102,34 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\packages\server" />
+      <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\packages\web" />
       <recent name="C:\Users\petri\Documents\DevEducation\React_example\code" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\packages\web" />
+      <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\packeges" />
       <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\src\pages\Main\component\GalleryView" />
       <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\src\pages\About" />
       <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\src\pages\Note" />
-      <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\src\pages\Todos\component" />
-      <recent name="C:\Users\petri\Documents\DevEducation\React_example\code\src\pages\Todos" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.start (1)">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/packages/web/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -100,6 +147,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
       </list>
@@ -134,6 +182,7 @@
       <workItem from="1651128960691" duration="4300000" />
       <workItem from="1651134973047" duration="1354000" />
       <workItem from="1651505697461" duration="3076000" />
+      <workItem from="1651662663305" duration="2067000" />
     </task>
     <servers />
   </component>
