@@ -6,10 +6,10 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store';
 import { Note } from './mainSlice';
 import { actionGetNotes } from './actions';
-import { ListToggle } from './component/ListToggle';
+import { ListToggle } from './components/ListToggle';
 import { ViewTypeEnum } from './ViewType.enum';
-import { GalleryView } from './component/GalleryView/GalleryView';
-import { ListView } from './component/ListView/ListView';
+import { GalleryView } from './components/GalleryView/GalleryView';
+import { ListView } from './components/ListView/ListView';
 
 function BaseMain() {
   const location = useLocation();
@@ -28,7 +28,6 @@ function BaseMain() {
 
     return urlType;
   });
-
   const notes = useSelector<RootState, Array<Note>>((s) => s.main.notes, shallowEqual);
 
   React.useEffect(() => {

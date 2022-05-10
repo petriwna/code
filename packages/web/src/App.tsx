@@ -1,20 +1,20 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Switch, Link, Route } from 'react-router-dom';
+import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
 import loadable from '@loadable/component';
 // eslint-disable-next-line @emotion/no-vanilla
 import { css } from '@emotion/css';
-
-import './App.css';
 
 import { Location } from 'history';
 import { store } from './store';
 
 const Main = loadable(() => import('./pages/Main/Main'));
 const Editor = loadable(() => import('./pages/Editor/Editor'));
+const SignUp = loadable(() => import('./pages/Login/SignUp'));
+const SignIn = loadable(() => import('./pages/Login/SignIn'));
 
 function NotFound() {
-  return <h1>NotFound</h1>;
+  return <h2>NotFound</h2>;
 }
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         <main
           className={css`
             margin: 0 auto;
-            width: 80%;
+            max-width: 1080px;
           `}
         >
           <header className="App-header">
@@ -48,8 +48,10 @@ function App() {
           </header>
           <Switch>
             <Route exact path="/" component={Main} />
+            <Route exact path="/sign_up" component={SignUp} />
+            <Route exact path="/sign_in" component={SignIn} />
             <Route exact path="/editor/:noteId" component={Editor} />
-            <Route exact path="*" component={NotFound} />
+            <Route path="*" component={NotFound} />
           </Switch>
         </main>
       </BrowserRouter>

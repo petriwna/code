@@ -6,7 +6,7 @@ import { BaseEditor, Descendant } from 'slate';
 import { ReactEditor } from 'slate-react';
 import { HistoryEditor } from 'slate-history';
 
-export type BlockQuoterElement = {
+export type BlockQuoteElement = {
   type: 'block-quote';
   align?: string;
   children: Descendant[];
@@ -14,12 +14,6 @@ export type BlockQuoterElement = {
 
 export type BulletedListElement = {
   type: 'bulleted-list';
-  align?: string;
-  children: Descendant[];
-};
-
-export type NumberedListElement = {
-  type: 'numbered-list';
   align?: string;
   children: Descendant[];
 };
@@ -67,7 +61,7 @@ export type MentionElement = {
 
 export type ParagraphElement = {
   type: 'paragraph';
-  character: string;
+  align?: string;
   children: Descendant[];
 };
 
@@ -82,9 +76,8 @@ export type TitleElement = { type: 'title'; children: Descendant[] };
 export type VideoElement = { type: 'video'; url: string; children: EmptyText[] };
 
 type CustomElement =
-  | BlockQuoterElement
+  | BlockQuoteElement
   | BulletedListElement
-  | NumberedListElement
   | CheckListItemElement
   | EditableVoidElement
   | HeadingElement
@@ -104,7 +97,6 @@ type CustomElement =
 export type CustomText = {
   bold?: boolean;
   italic?: boolean;
-  underline?: boolean;
   code?: boolean;
   text: string;
 };

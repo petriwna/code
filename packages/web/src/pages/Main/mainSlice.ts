@@ -1,5 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
+// import { v4 } from 'uuid';
 
 export type Note = {
   id: string;
@@ -11,6 +12,7 @@ export type Note = {
   createdAt: number;
   updatedAt: number;
 };
+
 export type MainState = {
   isLoading: boolean;
   notes: Array<Note>;
@@ -32,4 +34,5 @@ export const mainSlice = createSlice({
 });
 
 const { setNotes } = mainSlice.actions;
+
 export { setNotes };
