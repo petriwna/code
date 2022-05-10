@@ -10,8 +10,8 @@ import { store } from './store';
 
 const Main = loadable(() => import('./pages/Main/Main'));
 const Editor = loadable(() => import('./pages/Editor/Editor'));
-const SignUp = loadable(() => import('./pages/Login/SignUp'));
-const SignIn = loadable(() => import('./pages/Login/SignIn'));
+const Login = loadable(() => import('./pages/auth/Login/Login'));
+const Registration = loadable(() => import('./pages/auth/Registration/Registration'));
 
 function NotFound() {
   return <h2>NotFound</h2>;
@@ -48,9 +48,9 @@ function App() {
           </header>
           <Switch>
             <Route exact path="/" component={Main} />
-            <Route exact path="/sign_up" component={SignUp} />
-            <Route exact path="/sign_in" component={SignIn} />
             <Route exact path="/editor/:noteId" component={Editor} />
+            <Route exact path="/signin" component={Login} />
+            <Route exact path="/signup" component={Registration} />
             <Route path="*" component={NotFound} />
           </Switch>
         </main>

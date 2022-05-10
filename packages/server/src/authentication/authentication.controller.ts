@@ -11,6 +11,7 @@ import {
 } from '@nestjs/common';
 import { ApiBody } from '@nestjs/swagger';
 import { AuthenticationService } from './authentication.service';
+// eslint-disable-next-line import/no-named-as-default
 import RegisterDto from './dto/register.dto';
 import RequestWithUser from './requestWithUser.interface';
 import { LocalAuthenticationGuard } from './localAuthentication.guard';
@@ -18,6 +19,7 @@ import JwtAuthenticationGuard from './jwt-authentication.guard';
 import { UsersService } from '../users/users.service';
 import JwtRefreshGuard from './jwt-refresh.guard';
 import { EmailConfirmationService } from '../emailConfirmation/emailConfirmation.service';
+// eslint-disable-next-line import/no-named-as-default
 import LogInDto from './dto/logIn.dto';
 
 @Controller('authentication')
@@ -31,9 +33,11 @@ export class AuthenticationController {
 
   @Post('register')
   async register(@Body() registrationData: RegisterDto) {
+    console.log(registrationData);
+
     const user = await this.authenticationService.register(registrationData);
-    await this.emailConfirmationService.sendVerificationLink(registrationData.email);
-    console.log(`${user} register`);
+    console.log(user);
+    // await this.emailConfirmationService.sendVerificationLink(registrationData.email); // TODO fix
     return user;
   }
 
@@ -48,8 +52,6 @@ export class AuthenticationController {
       user.id,
     );
 
-    console.log(`${user} login`);
-
     await this.usersService.setCurrentRefreshToken(refreshToken, user.id);
 
     request.res.setHeader('Set-Cookie', [accessTokenCookie, refreshTokenCookie]);
@@ -58,6 +60,7 @@ export class AuthenticationController {
       return;
     }
 
+    // eslint-disable-next-line consistent-return
     return user;
   }
 
