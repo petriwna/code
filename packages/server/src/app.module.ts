@@ -13,7 +13,6 @@ import { UsersModule } from './users/users.module';
 // import HealthModule from './health/health.module';
 import LogsMiddleware from './utils/logs.middleware';
 import { LoggerModule } from './logger/logger.module';
-import { EmailConfirmationModule } from './emailConfirmation/emailConfirmation.module';
 
 @Module({
   imports: [
@@ -49,7 +48,7 @@ import { EmailConfirmationModule } from './emailConfirmation/emailConfirmation.m
     // HealthModule,
     // ChatModule,
     // OptimizeModule,
-    EmailConfirmationModule,
+    // EmailConfirmationModule,
     // GoogleAuthenticationModule,
     // DatabaseFilesModule,
   ],

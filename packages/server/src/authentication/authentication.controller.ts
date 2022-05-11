@@ -10,17 +10,16 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { ApiBody } from '@nestjs/swagger';
+
 import { AuthenticationService } from './authentication.service';
-// eslint-disable-next-line import/no-named-as-default
-import RegisterDto from './dto/register.dto';
 import RequestWithUser from './requestWithUser.interface';
 import { LocalAuthenticationGuard } from './localAuthentication.guard';
 import JwtAuthenticationGuard from './jwt-authentication.guard';
 import { UsersService } from '../users/users.service';
 import JwtRefreshGuard from './jwt-refresh.guard';
 import { EmailConfirmationService } from '../emailConfirmation/emailConfirmation.service';
-// eslint-disable-next-line import/no-named-as-default
-import LogInDto from './dto/logIn.dto';
+import { RegisterDto } from './dto/register.dto';
+import { LogInDto } from './dto/logIn.dto';
 
 @Controller('authentication')
 @UseInterceptors(ClassSerializerInterceptor)
@@ -33,12 +32,10 @@ export class AuthenticationController {
 
   @Post('register')
   async register(@Body() registrationData: RegisterDto) {
-    console.log(registrationData);
-
     const user = await this.authenticationService.register(registrationData);
-    console.log(user);
-    await this.emailConfirmationService.sendVerificationLink(registrationData.email); // TODO fix
-    console.log(registrationData.email);
+    // @ts-ignore
+    await this.emailConfirmationService.sendVerificationLink(user);
+
     return user;
   }
 
@@ -58,8 +55,9 @@ export class AuthenticationController {
     request.res.setHeader('Set-Cookie', [accessTokenCookie, refreshTokenCookie]);
 
     if (user.isTwoFactorAuthenticationEnabled) {
-      return;
+      return null;
     }
+
     return user;
   }
 
@@ -83,6 +81,7 @@ export class AuthenticationController {
     const accessTokenCookie = this.authenticationService.getCookieWithJwtAccessToken(request.user.id);
 
     request.res.setHeader('Set-Cookie', accessTokenCookie);
+
     return request.user;
   }
 }
