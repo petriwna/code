@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbf88d7-287e-4411-8061-78021f0214f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4e91c0a-f4e1-4afe-ad04-f2606ba6dffd.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4e91c0a-f4e1-4afe-ad04-f2606ba6dffd/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4e91c0a-f4e1-4afe-ad04-f2606ba6dffd/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4e91c0a-f4e1-4afe-ad04-f2606ba6dffd/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4e91c0a-f4e1-4afe-ad04-f2606ba6dffd/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4e91c0a-f4e1-4afe-ad04-f2606ba6dffd/storage_v2/_src_/database/test.kkQ2AA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4e91c0a-f4e1-4afe-ad04-f2606ba6dffd/storage_v2/_src_/database/test.kkQ2AA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4e91c0a-f4e1-4afe-ad04-f2606ba6dffd/storage_v2/_src_/database/test.kkQ2AA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e4e91c0a-f4e1-4afe-ad04-f2606ba6dffd/storage_v2/_src_/database/test.kkQ2AA/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6c319aa-41ed-4936-8a26-9508bafc8503.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6c319aa-41ed-4936-8a26-9508bafc8503/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6c319aa-41ed-4936-8a26-9508bafc8503/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6c319aa-41ed-4936-8a26-9508bafc8503/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6c319aa-41ed-4936-8a26-9508bafc8503/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6c319aa-41ed-4936-8a26-9508bafc8503/storage_v2/_src_/database/test.kkQ2AA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6c319aa-41ed-4936-8a26-9508bafc8503/storage_v2/_src_/database/test.kkQ2AA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6c319aa-41ed-4936-8a26-9508bafc8503/storage_v2/_src_/database/test.kkQ2AA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/authentication/authentication.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/authentication/authentication.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/email/email.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/email/email.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/emailConfirmation/emailConfirmation.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/emailConfirmation/emailConfirmation.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/emailConfirmation/emailConfirmation.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/emailConfirmation/emailConfirmation.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/users/users.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/web/src/pages/auth/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/web/src/pages/auth/Login/Login.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +179,8 @@
       <workItem from="1652206502597" duration="3755000" />
       <workItem from="1652210335793" duration="6770000" />
       <workItem from="1652247128869" duration="10699000" />
-      <workItem from="1652259124924" duration="5084000" />
+      <workItem from="1652259124924" duration="6462000" />
+      <workItem from="1652277901827" duration="299000" />
     </task>
     <servers />
   </component>
