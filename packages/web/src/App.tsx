@@ -22,40 +22,14 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <main
-          className={css`
-            margin: 0 auto;
-            max-width: 1080px;
-          `}
-        >
-          <header className="App-header">
-            <nav>
-              <ul
-                className={css`
-                  display: flex;
-                  padding: 10px;
-                  font-size: 18px;
-                  list-style: none;
-                  & > li {
-                    padding: 5px;
-                  }
-                `}
-              >
-                <li>
-                  <Link to={(location: Location) => `/${location.search}`}>Main</Link>
-                </li>
-              </ul>
-            </nav>
-          </header>
-          <Switch>
-            <Route exact path="/" component={Main} />
-            <Route exact path="/editor/:noteId" component={Editor} />
-            <Route exact path="/signin" component={Login} />
-            <Route exact path="/signup" component={Registration} />
-            <Route exact path="/confirm/:token" component={ConfirmEmail} />
-            <Route path="*" component={NotFound} />
-          </Switch>
-        </main>
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route exact path="/editor/:noteId" component={Editor} />
+          <Route exact path="/signin" component={Login} />
+          <Route exact path="/signup" component={Registration} />
+          <Route exact path="/confirm/:token" component={ConfirmEmail} />
+          <Route path="*" component={NotFound} />
+        </Switch>
       </BrowserRouter>
     </Provider>
   );

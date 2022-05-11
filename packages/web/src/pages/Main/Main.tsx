@@ -10,6 +10,7 @@ import { ListToggle } from './components/ListToggle';
 import { ViewTypeEnum } from './ViewType.enum';
 import { GalleryView } from './components/GalleryView/GalleryView';
 import { ListView } from './components/ListView/ListView';
+import ResponsiveAppBar from '../shared-components/AppBar/ResponsiveAppBar';
 
 function BaseMain() {
   const location = useLocation();
@@ -45,6 +46,7 @@ function BaseMain() {
 
   return (
     <div>
+      <ResponsiveAppBar />
       <ListToggle type={type} changeType={setType} />
       {notes.length ? <Component notes={notes} /> : <div>...Loading</div>}
     </div>

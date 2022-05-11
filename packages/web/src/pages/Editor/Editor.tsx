@@ -11,6 +11,7 @@ import { DefaultElement } from './DefaultElement';
 import { Leaf } from './Leaf';
 import { CustomEditorHelpers } from './utils';
 import { CustomEditor } from '../../react-app-env';
+import ResponsiveAppBar from '../shared-components/AppBar/ResponsiveAppBar';
 
 function renderElement(props: RenderElementProps) {
   const { attributes, children } = props;
@@ -50,76 +51,79 @@ export default function Editor() {
   }, []);
 
   return (
-    <div
-      className={css`
-        width: 500px;
-        height: 300px;
-        border: 1px solid black;
-        margin: 0 auto;
-        padding: 5px;
-      `}
-    >
-      <Slate
-        editor={editor}
-        value={initialValue}
-        onChange={(value) => {
-          const isAstChange = editor.operations.some((op) => op.type !== 'set_selection');
-
-          if (isAstChange) {
-            const content = JSON.stringify(value);
-            localStorage.setItem('content', content);
-          }
-        }}
+    <div>
+      <ResponsiveAppBar />
+      <div
+        className={css`
+          width: 500px;
+          height: 300px;
+          border: 1px solid black;
+          margin: 10px auto;
+          padding: 5px;
+        `}
       >
-        <div
-          className={css`
-            border-bottom: 1px solid black;
-            padding-bottom: 5px;
-          `}
-        >
-          <button
-            type="button"
-            onMouseDown={(event) => {
-              event.preventDefault();
-              CustomEditorHelpers.toggleBoldMark(editor);
-            }}
-          >
-            Bold
-          </button>
-          <button
-            type="button"
-            onMouseDown={(event) => {
-              event.preventDefault();
-              CustomEditorHelpers.toggleCodeBlock(editor);
-            }}
-          >
-            Code Block
-          </button>
-        </div>
-        <Editable
-          renderElement={renderElement}
-          renderLeaf={renderLeaf}
-          onKeyDown={(event) => {
-            if (!event.ctrlKey) {
-              return;
-            }
+        <Slate
+          editor={editor}
+          value={initialValue}
+          onChange={(value) => {
+            const isAstChange = editor.operations.some((op) => op.type !== 'set_selection');
 
-            switch (event.key) {
-              case '`': {
-                event.preventDefault();
-                CustomEditorHelpers.toggleCodeBlock(editor);
-                break;
-              }
-              case 'b': {
-                event.preventDefault();
-                CustomEditorHelpers.toggleBoldMark(editor);
-                break;
-              }
-              default:
+            if (isAstChange) {
+              const content = JSON.stringify(value);
+              localStorage.setItem('content', content);
             }
           }}
-        />
-      </Slate>
+        >
+          <div
+            className={css`
+              border-bottom: 1px solid black;
+              padding-bottom: 5px;
+            `}
+          >
+            <button
+              type="button"
+              onMouseDown={(event) => {
+                event.preventDefault();
+                CustomEditorHelpers.toggleBoldMark(editor);
+              }}
+            >
+              Bold
+            </button>
+            <button
+              type="button"
+              onMouseDown={(event) => {
+                event.preventDefault();
+                CustomEditorHelpers.toggleCodeBlock(editor);
+              }}
+            >
+              Code Block
+            </button>
+          </div>
+          <Editable
+            renderElement={renderElement}
+            renderLeaf={renderLeaf}
+            onKeyDown={(event) => {
+              if (!event.ctrlKey) {
+                return;
+              }
+
+              switch (event.key) {
+                case '`': {
+                  event.preventDefault();
+                  CustomEditorHelpers.toggleCodeBlock(editor);
+                  break;
+                }
+                case 'b': {
+                  event.preventDefault();
+                  CustomEditorHelpers.toggleBoldMark(editor);
+                  break;
+                }
+                default:
+              }
+            }}
+          />
+        </Slate>
+      </div>
     </div>
   );
 }

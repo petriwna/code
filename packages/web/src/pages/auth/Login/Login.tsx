@@ -35,8 +35,8 @@ export default function Login() {
 
       try {
         const url = 'http://localhost:3500/authentication/log-in';
-        const { data } = await axios.post(url, values, { withCredentials: true });
-        console.log('authorization');
+        await axios.post(url, values, { withCredentials: true });
+        window.open('http://localhost:3000/');
       } catch (e) {
         console.log(e.response.data.message);
         // @ts-ignore
