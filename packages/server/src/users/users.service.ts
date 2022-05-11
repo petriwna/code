@@ -36,7 +36,7 @@ export class UsersService {
   }
 
   async create(userData: CreateUserDto) {
-    const newUser = this.usersRepository.create({ ...userData, isEmailConfirmed: true }); // TODO remove isEmailConfirmed
+    const newUser = this.usersRepository.create({ ...userData });
 
     return this.usersRepository.save(newUser);
   }

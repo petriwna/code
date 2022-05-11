@@ -37,7 +37,8 @@ export class AuthenticationController {
 
     const user = await this.authenticationService.register(registrationData);
     console.log(user);
-    // await this.emailConfirmationService.sendVerificationLink(registrationData.email); // TODO fix
+    await this.emailConfirmationService.sendVerificationLink(registrationData.email); // TODO fix
+    console.log(registrationData.email);
     return user;
   }
 
@@ -59,8 +60,6 @@ export class AuthenticationController {
     if (user.isTwoFactorAuthenticationEnabled) {
       return;
     }
-
-    // eslint-disable-next-line consistent-return
     return user;
   }
 

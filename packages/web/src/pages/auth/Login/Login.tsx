@@ -14,19 +14,13 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Alert } from '../components/Alert';
 import { Form } from '../components/Form';
 import { NavLink } from '../../shared-components';
 
 const validationSchema = yup.object({
-  // @ts-ignore
-  usernameOrEmail: yup.string('Enter your email').email('Enter a valid email').required('Email is required'),
-  password: yup
-    // @ts-ignore
-    .string('Enter your password')
-    .min(8, 'Password should be of minimum 8 characters length')
-    .required('Password is required'),
+  usernameOrEmail: yup.string().email('Enter a valid email').required('Email is required'),
+  password: yup.string().min(8, 'Password should be of minimum 8 characters length').required('Password is required'),
 });
 
 export default function Login() {
@@ -36,14 +30,14 @@ export default function Login() {
       password: '',
     },
     validationSchema,
-    onSubmit: (values, formikHelpers) => {
-      console.log(values);
+    onSubmit: async (values, formikHelpers) => {
       formikHelpers.setSubmitting(false);
 
       try {
+        console.log(values);
         const url = 'http://localhost:3500/authentication/log-in';
-        // @ts-ignore
         const { data } = await axios.post(url, values, { withCredentials: true });
+        console.log(`Is Login ${data}`);
         console.log(data);
       } catch (e) {
         console.log(e.response.data.message, 'error');
@@ -77,10 +71,11 @@ export default function Login() {
         <Typography component="h1" variant="h5">
           SignIn
         </Typography>
-        <Form name="login" onSubmit={formik.handleSubmit} sx={{ mt: 1 }}>
-          {/* <div> */}
-          {/*   {formik.errors && formik.errors?.errorMsg && <Alert color="error">{formik.errors?.errorMsg}</Alert>} */}
-          {/* </div> */}
+        <Form name="log-in" onSubmit={formik.handleSubmit} sx={{ mt: 1 }}>
+          <Box sx={{ marginBottom: 2 }}>
+            {/* @ts-ignore */}
+            <Alert color="error">{formik.errors.errorMsg}</Alert>
+          </Box>
           <TextField
             margin="normal"
             required

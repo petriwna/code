@@ -1,4 +1,5 @@
 import { Controller, ClassSerializerInterceptor, UseInterceptors, Post, Body, UseGuards, Req } from '@nestjs/common';
+// eslint-disable-next-line import/no-named-as-default
 import ConfirmEmailDto from './confirmEmail.dto';
 import { EmailConfirmationService } from './emailConfirmation.service';
 import JwtAuthenticationGuard from '../authentication/jwt-authentication.guard';

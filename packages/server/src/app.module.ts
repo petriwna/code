@@ -13,6 +13,7 @@ import { UsersModule } from './users/users.module';
 // import HealthModule from './health/health.module';
 import LogsMiddleware from './utils/logs.middleware';
 import { LoggerModule } from './logger/logger.module';
+import { EmailConfirmationModule } from './emailConfirmation/emailConfirmation.module';
 
 @Module({
   imports: [
@@ -29,13 +30,14 @@ import { LoggerModule } from './logger/logger.module';
         JWT_REFRESH_TOKEN_EXPIRATION_TIME: Joi.string().required(),
         FRONTEND_URL: Joi.string(),
         PORT: Joi.number(),
-        // EMAIL_SERVICE: Joi.string().required(),
-        // EMAIL_USER: Joi.string().required(),
-        // EMAIL_PASSWORD: Joi.string().required(),
-        // EMAIL_CONFIRMATION_URL: Joi.string().required(),
+        EMAIL_HOST: Joi.string().required(),
+        EMAIL_PORT: Joi.string().required(),
+        EMAIL_USER: Joi.string().required(),
+        EMAIL_PASSWORD: Joi.string().required(),
+        EMAIL_CONFIRMATION_URL: Joi.string().required(),
         // TWO_FACTOR_AUTHENTICATION_APP_NAME: Joi.string(),
-        // JWT_VERIFICATION_TOKEN_SECRET: Joi.string().required(),
-        // JWT_VERIFICATION_TOKEN_EXPIRATION_TIME: Joi.string().required(),
+        JWT_VERIFICATION_TOKEN_SECRET: Joi.string().required(),
+        JWT_VERIFICATION_TOKEN_EXPIRATION_TIME: Joi.string().required(),
         // GOOGLE_AUTH_CLIENT_ID: Joi.string().required(),
         // GOOGLE_AUTH_CLIENT_SECRET: Joi.string().required(),
       }),
@@ -47,7 +49,7 @@ import { LoggerModule } from './logger/logger.module';
     // HealthModule,
     // ChatModule,
     // OptimizeModule,
-    // EmailConfirmationModule,
+    EmailConfirmationModule,
     // GoogleAuthenticationModule,
     // DatabaseFilesModule,
   ],

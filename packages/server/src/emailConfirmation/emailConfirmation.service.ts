@@ -20,10 +20,10 @@ export class EmailConfirmationService {
       secret: this.configService.get('JWT_VERIFICATION_TOKEN_SECRET'),
       expiresIn: `${this.configService.get('JWT_VERIFICATION_TOKEN_EXPIRATION_TIME')}s`,
     });
-
     const url = `${this.configService.get('EMAIL_CONFIRMATION_URL')}?token=${token}`;
 
     const text = `Welcome to the application. To confirm the email address, click here: ${url}`;
+    console.log(text);
 
     return this.emailService.sendMail({
       to: email,
